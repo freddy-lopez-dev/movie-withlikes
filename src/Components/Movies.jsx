@@ -1,11 +1,11 @@
 import Movie from "./Movie";
 
 const Movies = (props) => {
-  const { listOfMovies } = props;
+  const { listOfMovies, heading } = props;
   return (
     <div className="titleList">
       <div className="title">
-        <h1>Trending Movies</h1>
+        <h1>{heading}</h1>
         <div className="titles-wrapper">
           {listOfMovies.map((movie) => {
             return <Movie movie={movie} key={movie.id} />;

@@ -1,14 +1,9 @@
-import imagePlaceholder from "./image-not-available.jpg";
-
 const Movie = (props) => {
   const { id, image, title, rating, plot, liked } = props.movie;
   console.log(image, liked);
   return (
     <div className="movie" data-id={id}>
-      <img
-        src={image === undefined ? imagePlaceholder : image}
-        alt={`${title} Movie poster`}
-      />
+      <img src={image} alt={`${title} Movie poster`} />
       <div className="overlay">
         <div className="title">{title}</div>
         <div className="rating">{rating}</div>
